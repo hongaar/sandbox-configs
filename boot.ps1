@@ -4,5 +4,9 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 # refreshenv
 C:\ProgramData\chocolatey\bin\RefreshEnv.cmd
 
-# install
-choco install sublimetext3 heidisql procexp googlechrome -y
+# install, ignore checksums (read https://www.gep13.co.uk/blog/chocolatey-error-hashes-do-not-match)
+choco install -y --ignore-checksums `
+    sublimetext3 `
+    heidisql `
+    procexp `
+    googlechrome `
